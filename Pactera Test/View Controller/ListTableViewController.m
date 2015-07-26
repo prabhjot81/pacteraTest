@@ -54,7 +54,6 @@ dispatch_queue_t myBackgroundQueue;
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     [FactOperation getFactListOperationCompletion:^(id factListData) {
-        NSLog(@"%@", factListData);
         
         if ([UIApplication sharedApplication].isNetworkActivityIndicatorVisible) {
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

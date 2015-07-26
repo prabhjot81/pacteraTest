@@ -122,9 +122,9 @@
                                                                      attribute:NSLayoutAttributeRight
                                                                      relatedBy:NSLayoutRelationEqual
                                                                         toItem:self.contentView
-                                                                     attribute:NSLayoutAttributeTrailingMargin
+                                                                     attribute:NSLayoutAttributeRight
                                                                     multiplier:1
-                                                                      constant:0]];
+                                                                      constant:-10]];
         self.factImageWidthConstraint = [NSLayoutConstraint constraintWithItem:_factImage
                                                                      attribute:NSLayoutAttributeWidth
                                                                      relatedBy:NSLayoutRelationEqual
@@ -145,7 +145,7 @@
                                                                      attribute:NSLayoutAttributeRight
                                                                      relatedBy:NSLayoutRelationEqual
                                                                         toItem:self.contentView
-                                                                     attribute:NSLayoutAttributeTrailingMargin
+                                                                     attribute:NSLayoutAttributeRight
                                                                     multiplier:1
                                                                       constant:0]];
     }
