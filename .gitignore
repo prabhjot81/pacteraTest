@@ -1,0 +1,11 @@
+# OSX
+.DS_Store
+
+# Xcode
+build/
+*.xcodeproj/*.xcworkspace
+*.xcodeproj/xcuserdata
+*.xcworkspace/xcuserdata
+*.xccheckout
+*.xcuserstate
+*.xcbkptlist
