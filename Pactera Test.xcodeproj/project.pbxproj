@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8046BD6A1B64DA600084B1C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD691B64DA600084B1C7 /* main.m */; };
+		8046BD6D1B64DA600084B1C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD6C1B64DA600084B1C7 /* AppDelegate.m */; };
+		8046BD701B64DA600084B1C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD6F1B64DA600084B1C7 /* ViewController.m */; };
+		8046BD731B64DA600084B1C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8046BD711B64DA600084B1C7 /* Main.storyboard */; };
+		8046BD751B64DA600084B1C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8046BD741B64DA600084B1C7 /* Images.xcassets */; };
+		8046BD781B64DA600084B1C7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8046BD761B64DA600084B1C7 /* LaunchScreen.xib */; };
+		8046BD841B64DA600084B1C7 /* Pactera_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD831B64DA600084B1C7 /* Pactera_TestTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8046BD7E1B64DA600084B1C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8046BD5C1B64DA600084B1C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8046BD631B64DA600084B1C7;
+			remoteInfo = "Pactera Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8046BD641B64DA600084B1C7 /* Pactera Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pactera Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8046BD681B64DA600084B1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8046BD691B64DA600084B1C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8046BD6B1B64DA600084B1C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8046BD6C1B64DA600084B1C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8046BD6E1B64DA600084B1C7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8046BD6F1B64DA600084B1C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8046BD721B64DA600084B1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8046BD741B64DA600084B1C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8046BD771B64DA600084B1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8046BD7D1B64DA600084B1C7 /* Pactera TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pactera TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8046BD821B64DA600084B1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8046BD831B64DA600084B1C7 /* Pactera_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pactera_TestTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8046BD611B64DA600084B1C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8046BD7A1B64DA600084B1C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8046BD5B1B64DA600084B1C7 = {
+			isa = PBXGroup;
+			children = (
+				8046BD661B64DA600084B1C7 /* Pactera Test */,
+				8046BD801B64DA600084B1C7 /* Pactera TestTests */,
+				8046BD651B64DA600084B1C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8046BD651B64DA600084B1C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8046BD641B64DA600084B1C7 /* Pactera Test.app */,
+				8046BD7D1B64DA600084B1C7 /* Pactera TestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8046BD661B64DA600084B1C7 /* Pactera Test */ = {
+			isa = PBXGroup;
+			children = (
+				8046BD6B1B64DA600084B1C7 /* AppDelegate.h */,
+				8046BD6C1B64DA600084B1C7 /* AppDelegate.m */,
+				8046BD6E1B64DA600084B1C7 /* ViewController.h */,
+				8046BD6F1B64DA600084B1C7 /* ViewController.m */,
+				8046BD711B64DA600084B1C7 /* Main.storyboard */,
+				8046BD741B64DA600084B1C7 /* Images.xcassets */,
+				8046BD761B64DA600084B1C7 /* LaunchScreen.xib */,
+				8046BD671B64DA600084B1C7 /* Supporting Files */,
+			);
+			path = "Pactera Test";
+			sourceTree = "<group>";
+		};
+		8046BD671B64DA600084B1C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8046BD681B64DA600084B1C7 /* Info.plist */,
+				8046BD691B64DA600084B1C7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8046BD801B64DA600084B1C7 /* Pactera TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				8046BD831B64DA600084B1C7 /* Pactera_TestTests.m */,
+				8046BD811B64DA600084B1C7 /* Supporting Files */,
+			);
+			path = "Pactera TestTests";
+			sourceTree = "<group>";
+		};
+		8046BD811B64DA600084B1C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8046BD821B64DA600084B1C7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8046BD631B64DA600084B1C7 /* Pactera Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8046BD871B64DA600084B1C7 /* Build configuration list for PBXNativeTarget "Pactera Test" */;
+			buildPhases = (
+				8046BD601B64DA600084B1C7 /* Sources */,
+				8046BD611B64DA600084B1C7 /* Frameworks */,
+				8046BD621B64DA600084B1C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pactera Test";
+			productName = "Pactera Test";
+			productReference = 8046BD641B64DA600084B1C7 /* Pactera Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8046BD7C1B64DA600084B1C7 /* Pactera TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8046BD8A1B64DA600084B1C7 /* Build configuration list for PBXNativeTarget "Pactera TestTests" */;
+			buildPhases = (
+				8046BD791B64DA600084B1C7 /* Sources */,
+				8046BD7A1B64DA600084B1C7 /* Frameworks */,
+				8046BD7B1B64DA600084B1C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8046BD7F1B64DA600084B1C7 /* PBXTargetDependency */,
+			);
+			name = "Pactera TestTests";
+			productName = "Pactera TestTests";
+			productReference = 8046BD7D1B64DA600084B1C7 /* Pactera TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8046BD5C1B64DA600084B1C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Pactera;
+				TargetAttributes = {
+					8046BD631B64DA600084B1C7 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					8046BD7C1B64DA600084B1C7 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 8046BD631B64DA600084B1C7;
+					};
+				};
+			};
+			buildConfigurationList = 8046BD5F1B64DA600084B1C7 /* Build configuration list for PBXProject "Pactera Test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8046BD5B1B64DA600084B1C7;
+			productRefGroup = 8046BD651B64DA600084B1C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8046BD631B64DA600084B1C7 /* Pactera Test */,
+				8046BD7C1B64DA600084B1C7 /* Pactera TestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8046BD621B64DA600084B1C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8046BD731B64DA600084B1C7 /* Main.storyboard in Resources */,
+				8046BD781B64DA600084B1C7 /* LaunchScreen.xib in Resources */,
+				8046BD751B64DA600084B1C7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8046BD7B1B64DA600084B1C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8046BD601B64DA600084B1C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8046BD701B64DA600084B1C7 /* ViewController.m in Sources */,
+				8046BD6D1B64DA600084B1C7 /* AppDelegate.m in Sources */,
+				8046BD6A1B64DA600084B1C7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8046BD791B64DA600084B1C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8046BD841B64DA600084B1C7 /* Pactera_TestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8046BD7F1B64DA600084B1C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8046BD631B64DA600084B1C7 /* Pactera Test */;
+			targetProxy = 8046BD7E1B64DA600084B1C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8046BD711B64DA600084B1C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8046BD721B64DA600084B1C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8046BD761B64DA600084B1C7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8046BD771B64DA600084B1C7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8046BD851B64DA600084B1C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8046BD861B64DA600084B1C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8046BD881B64DA600084B1C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pactera Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8046BD891B64DA600084B1C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pactera Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8046BD8B1B64DA600084B1C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Pactera TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pactera Test.app/Pactera Test";
+			};
+			name = Debug;
+		};
+		8046BD8C1B64DA600084B1C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Pactera TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pactera Test.app/Pactera Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8046BD5F1B64DA600084B1C7 /* Build configuration list for PBXProject "Pactera Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8046BD851B64DA600084B1C7 /* Debug */,
+				8046BD861B64DA600084B1C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8046BD871B64DA600084B1C7 /* Build configuration list for PBXNativeTarget "Pactera Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8046BD881B64DA600084B1C7 /* Debug */,
+				8046BD891B64DA600084B1C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8046BD8A1B64DA600084B1C7 /* Build configuration list for PBXNativeTarget "Pactera TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8046BD8B1B64DA600084B1C7 /* Debug */,
+				8046BD8C1B64DA600084B1C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8046BD5C1B64DA600084B1C7 /* Project object */;
+}
