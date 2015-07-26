@@ -11,6 +11,9 @@
 
 @interface FactTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) UIImageView *factImage;
+@property (nonatomic, strong) NSLayoutConstraint *factImageWidthConstraint;
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier fact:(Fact *) fact;
 - (void) configureCell: (Fact *) inFact;
 

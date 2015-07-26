@@ -9,13 +9,10 @@
 #import "FactTableViewCell.h"
 #import "AppDelegate.h"
 
-dispatch_queue_t myBackgroundQueue;
-
 @interface FactTableViewCell ()
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *detailLabel;
-@property (nonatomic, strong) UIImageView *factImage;
 
 @end
 
@@ -57,32 +54,31 @@ dispatch_queue_t myBackgroundQueue;
 - (void) configureCell: (Fact *) inFact {
     self.titleLabel.text = inFact.title;
     self.detailLabel.text = inFact.detail;
-
-    if (inFact.image.length > 0) {
-        
-        // set default user image while image is being downloaded
-        self.factImage.image = [UIImage imageNamed:@"default-placeholder"];
-        
-        // download the image asynchronously
-        myBackgroundQueue = dispatch_queue_create("com.pactera.photo", NULL);
-        dispatch_async(myBackgroundQueue, ^(void) {
-            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:inFact.image]];
-            if (imageData) {
-                dispatch_async(dispatch_get_main_queue(), ^(void) {
-                    self.factImage.image = [UIImage imageWithData:imageData];
-                });
-            }
-        });
+    
+    [self layoutIfNeeded];
+    
+    CGFloat y = CGRectGetMaxY(self.detailLabel.frame);
+    
+    if (y < 60) { // Default case: cell height should be equivant to image height
+        y = 60;
     }
+    self.height = y + 10;
+}
+
+- (void)setHeight:(CGFloat)newHeight
+{
+    CGRect frameRect = [self.contentView frame];
+    frameRect.size.height = newHeight;
+    [self.contentView setFrame:frameRect];
 }
 
 - (void) updateCellConstraintsForFact:(Fact *) inFact {
     
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_titleLabel
-                                                                 attribute:NSLayoutAttributeLeading
+                                                                 attribute:NSLayoutAttributeLeft
                                                                  relatedBy:NSLayoutRelationEqual
                                                                     toItem:self.contentView
-                                                                 attribute:NSLayoutAttributeLeading
+                                                                 attribute:NSLayoutAttributeLeft
                                                                 multiplier:1
                                                                   constant:10]];
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_titleLabel
@@ -129,13 +125,14 @@ dispatch_queue_t myBackgroundQueue;
                                                                      attribute:NSLayoutAttributeTrailingMargin
                                                                     multiplier:1
                                                                       constant:0]];
-        [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_factImage
+        self.factImageWidthConstraint = [NSLayoutConstraint constraintWithItem:_factImage
                                                                      attribute:NSLayoutAttributeWidth
                                                                      relatedBy:NSLayoutRelationEqual
                                                                         toItem:nil
                                                                      attribute:NSLayoutAttributeNotAnAttribute
                                                                     multiplier:1
-                                                                      constant:60]];
+                                                                      constant:60];
+        [self.contentView addConstraint:self.factImageWidthConstraint];
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_factImage
                                                                      attribute:NSLayoutAttributeHeight
                                                                      relatedBy:NSLayoutRelationEqual
@@ -143,13 +140,6 @@ dispatch_queue_t myBackgroundQueue;
                                                                      attribute:NSLayoutAttributeNotAnAttribute
                                                                     multiplier:1
                                                                       constant:60]];
-        [self.contentView removeConstraint:[NSLayoutConstraint constraintWithItem:_detailLabel
-                                                                     attribute:NSLayoutAttributeRight
-                                                                     relatedBy:NSLayoutRelationEqual
-                                                                        toItem:self.contentView
-                                                                     attribute:NSLayoutAttributeTrailingMargin
-                                                                    multiplier:1
-                                                                      constant:0]];
     } else {
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_detailLabel
                                                                      attribute:NSLayoutAttributeRight
@@ -159,7 +149,6 @@ dispatch_queue_t myBackgroundQueue;
                                                                     multiplier:1
                                                                       constant:0]];
     }
-    [self setNeedsLayout];
     [self layoutIfNeeded];
 }
 

@@ -15,6 +15,8 @@
 
 #import "FactTableViewCell.h"
 
+dispatch_queue_t myBackgroundQueue;
+
 @interface ListTableViewController ()
 
 @property (nonatomic, strong) NSArray *factArray;
@@ -84,6 +86,10 @@
 
 #pragma TableView delegates/datasource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_factArray count] > 0 ? [_factArray count] : 1;
 }
@@ -93,7 +99,17 @@
     if ([_factArray count] == 0) { //  Default case for error handling
         return 50;
     }
-    return 100;
+    NSString *cellIdentifier = [NSString stringWithFormat:@"CellIdentifier%ld", (long)[indexPath row]];
+    Fact *fact = _factArray[indexPath.row];
+    
+    FactTableViewCell * factCell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (factCell == nil)
+    {
+        factCell = [[FactTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier fact:fact];
+        [factCell configureCell:fact];
+    }
+    int height = factCell.contentView.frame.size.height;
+    return height;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -117,6 +133,31 @@
         [factCell configureCell:fact];
     }
     return factCell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([_factArray count] == 0) {
+        return;
+    }
+    Fact *inFact = _factArray[indexPath.row];
+    if (inFact.userImage == nil && inFact.image.length > 0) {
+        FactTableViewCell *factCell = (FactTableViewCell *)cell;
+        // set default user image while image is being downloaded
+        factCell.factImage.image = [UIImage imageNamed:@"default-placeholder"];
+        // download the image asynchronously
+        myBackgroundQueue = dispatch_queue_create("com.telstra.photo", NULL);
+        dispatch_async(myBackgroundQueue, ^(void) {
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:inFact.image]];
+            if (imageData) {
+                dispatch_async(dispatch_get_main_queue(), ^(void) {
+                    factCell.factImage.image = [UIImage imageWithData:imageData];
+                    inFact.userImage = [UIImage imageWithData:imageData];
+                });
+            } else { // If image is not available, then change it's width constraint to 0
+                factCell.factImageWidthConstraint.constant = 0;
+            }
+        });
+    }
 }
 
 @end
