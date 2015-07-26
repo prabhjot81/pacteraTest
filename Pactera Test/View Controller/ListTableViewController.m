@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSArray *factArray;
 @property (nonatomic, retain) NSMutableDictionary *factImageDictionary;
 @property (nonatomic, strong) UIRefreshControl *tableRefreshControl;
+@property (nonatomic, strong) NSString *errorMsg;
 
 @end
 
@@ -31,6 +32,8 @@
     _factArray = [NSArray array];
     self.tableRefreshControl = [[UIRefreshControl alloc] init];
     [self.tableRefreshControl addTarget:self action:@selector(loadFactList) forControlEvents:UIControlEventValueChanged];
+    
+    self.errorMsg = NSLocalizedString(@"Loading...", nil) ; // Initial message
     
     [self.tableView  addSubview:self.tableRefreshControl];
     
@@ -50,22 +53,30 @@
     
     [FactOperation getFactListOperationCompletion:^(id factListData) {
         NSLog(@"%@", factListData);
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        
+        if ([UIApplication sharedApplication].isNetworkActivityIndicatorVisible) {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        }
+        if ([self.tableRefreshControl isRefreshing]) {
+            [self.tableRefreshControl endRefreshing];
+        }
         
         FactList * factList = [[FactList alloc] initWithJSONData:factListData];
         self.title = factList.title;
         self.factArray = factList.facts;
         [self.tableView reloadData];
-        if ([self.tableRefreshControl isRefreshing]) {
+        
+    } errorHandler:^(NSError *error) {
+        
+        if ([UIApplication sharedApplication].isNetworkActivityIndicatorVisible) {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        }        if ([self.tableRefreshControl isRefreshing]) {
             [self.tableRefreshControl endRefreshing];
         }
         
-    } errorHandler:^(NSError *error) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error!!!", nil) message:error.description delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles: nil];
-        [alert show];
-        if ([self.tableRefreshControl isRefreshing]) {
-            [self.tableRefreshControl endRefreshing];
-        }
+        self.errorMsg = error.userInfo[@"NSLocalizedDescription"] ? error.userInfo[@"NSLocalizedDescription"] : NSLocalizedString(@"Exceptional error occured!!!", nil);
+        self.factArray = nil;
+        [self.tableView reloadData];
     }];
     
 }
@@ -79,7 +90,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if ([_factArray count] == 0) {
+    if ([_factArray count] == 0) { //  Default case for error handling
         return 50;
     }
     return 100;
@@ -87,9 +98,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if ([_factArray count] == 0) {
+    if ([_factArray count] == 0) { //  Default case for error handling
         UITableViewCell *loadingCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"NoDataIdentifier"];
-        loadingCell.textLabel.text = @"Loading...";
+        loadingCell.textLabel.text = self.errorMsg;
+        loadingCell.textLabel.font = [UIFont systemFontOfSize:14];
         loadingCell.textLabel.textAlignment = NSTextAlignmentCenter;
         return loadingCell;
     }

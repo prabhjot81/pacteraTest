@@ -37,7 +37,9 @@ dispatch_queue_t myBackgroundOperationQueue;
                 
             }
             else {
-                errorHandler(error);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    errorHandler(error);
+                });
             }
         }];
     });
