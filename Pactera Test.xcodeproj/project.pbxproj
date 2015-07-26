@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		8046BD6A1B64DA600084B1C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD691B64DA600084B1C7 /* main.m */; };
 		8046BD6D1B64DA600084B1C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD6C1B64DA600084B1C7 /* AppDelegate.m */; };
-		8046BD701B64DA600084B1C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD6F1B64DA600084B1C7 /* ViewController.m */; };
-		8046BD731B64DA600084B1C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8046BD711B64DA600084B1C7 /* Main.storyboard */; };
 		8046BD751B64DA600084B1C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8046BD741B64DA600084B1C7 /* Images.xcassets */; };
 		8046BD781B64DA600084B1C7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8046BD761B64DA600084B1C7 /* LaunchScreen.xib */; };
 		8046BD841B64DA600084B1C7 /* Pactera_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD831B64DA600084B1C7 /* Pactera_TestTests.m */; };
+		8046BD961B64DF6E0084B1C7 /* Fact.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD931B64DF6E0084B1C7 /* Fact.m */; };
+		8046BD971B64DF6E0084B1C7 /* FactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD951B64DF6E0084B1C7 /* FactList.m */; };
+		8046BD9F1B64E3020084B1C7 /* FactOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD9E1B64E3020084B1C7 /* FactOperation.m */; };
+		8046BDA21B64E30E0084B1C7 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BDA11B64E30E0084B1C7 /* ListTableViewController.m */; };
+		8046BDA51B64E31D0084B1C7 /* FactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046BDA41B64E31D0084B1C7 /* FactTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +35,21 @@
 		8046BD691B64DA600084B1C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8046BD6B1B64DA600084B1C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8046BD6C1B64DA600084B1C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8046BD6E1B64DA600084B1C7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8046BD6F1B64DA600084B1C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8046BD721B64DA600084B1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8046BD741B64DA600084B1C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8046BD771B64DA600084B1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8046BD7D1B64DA600084B1C7 /* Pactera TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pactera TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8046BD821B64DA600084B1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8046BD831B64DA600084B1C7 /* Pactera_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pactera_TestTests.m; sourceTree = "<group>"; };
+		8046BD921B64DF6E0084B1C7 /* Fact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fact.h; sourceTree = "<group>"; };
+		8046BD931B64DF6E0084B1C7 /* Fact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fact.m; sourceTree = "<group>"; };
+		8046BD941B64DF6E0084B1C7 /* FactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactList.h; sourceTree = "<group>"; };
+		8046BD951B64DF6E0084B1C7 /* FactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactList.m; sourceTree = "<group>"; };
+		8046BD9D1B64E3020084B1C7 /* FactOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FactOperation.h; path = Operation/FactOperation.h; sourceTree = "<group>"; };
+		8046BD9E1B64E3020084B1C7 /* FactOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FactOperation.m; path = Operation/FactOperation.m; sourceTree = "<group>"; };
+		8046BDA01B64E30E0084B1C7 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListTableViewController.h; path = "View Controller/ListTableViewController.h"; sourceTree = "<group>"; };
+		8046BDA11B64E30E0084B1C7 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListTableViewController.m; path = "View Controller/ListTableViewController.m"; sourceTree = "<group>"; };
+		8046BDA31B64E31D0084B1C7 /* FactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FactTableViewCell.h; path = "View Controller/Custom cell/FactTableViewCell.h"; sourceTree = "<group>"; };
+		8046BDA41B64E31D0084B1C7 /* FactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FactTableViewCell.m; path = "View Controller/Custom cell/FactTableViewCell.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +91,11 @@
 		8046BD661B64DA600084B1C7 /* Pactera Test */ = {
 			isa = PBXGroup;
 			children = (
+				8046BD981B64E0AC0084B1C7 /* View Controller */,
+				8046BD911B64DF6E0084B1C7 /* Model */,
+				8046BD8D1B64DEB60084B1C7 /* Operation */,
 				8046BD6B1B64DA600084B1C7 /* AppDelegate.h */,
 				8046BD6C1B64DA600084B1C7 /* AppDelegate.m */,
-				8046BD6E1B64DA600084B1C7 /* ViewController.h */,
-				8046BD6F1B64DA600084B1C7 /* ViewController.m */,
-				8046BD711B64DA600084B1C7 /* Main.storyboard */,
 				8046BD741B64DA600084B1C7 /* Images.xcassets */,
 				8046BD761B64DA600084B1C7 /* LaunchScreen.xib */,
 				8046BD671B64DA600084B1C7 /* Supporting Files */,
@@ -117,6 +127,45 @@
 				8046BD821B64DA600084B1C7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8046BD8D1B64DEB60084B1C7 /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				8046BD9D1B64E3020084B1C7 /* FactOperation.h */,
+				8046BD9E1B64E3020084B1C7 /* FactOperation.m */,
+			);
+			name = Operation;
+			sourceTree = "<group>";
+		};
+		8046BD911B64DF6E0084B1C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8046BD921B64DF6E0084B1C7 /* Fact.h */,
+				8046BD931B64DF6E0084B1C7 /* Fact.m */,
+				8046BD941B64DF6E0084B1C7 /* FactList.h */,
+				8046BD951B64DF6E0084B1C7 /* FactList.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8046BD981B64E0AC0084B1C7 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8046BD991B64E1630084B1C7 /* Custom cell */,
+				8046BDA01B64E30E0084B1C7 /* ListTableViewController.h */,
+				8046BDA11B64E30E0084B1C7 /* ListTableViewController.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		8046BD991B64E1630084B1C7 /* Custom cell */ = {
+			isa = PBXGroup;
+			children = (
+				8046BDA31B64E31D0084B1C7 /* FactTableViewCell.h */,
+				8046BDA41B64E31D0084B1C7 /* FactTableViewCell.m */,
+			);
+			name = "Custom cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +248,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8046BD731B64DA600084B1C7 /* Main.storyboard in Resources */,
 				8046BD781B64DA600084B1C7 /* LaunchScreen.xib in Resources */,
 				8046BD751B64DA600084B1C7 /* Images.xcassets in Resources */,
 			);
@@ -219,9 +267,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8046BD701B64DA600084B1C7 /* ViewController.m in Sources */,
+				8046BDA51B64E31D0084B1C7 /* FactTableViewCell.m in Sources */,
+				8046BD961B64DF6E0084B1C7 /* Fact.m in Sources */,
+				8046BD9F1B64E3020084B1C7 /* FactOperation.m in Sources */,
+				8046BD971B64DF6E0084B1C7 /* FactList.m in Sources */,
 				8046BD6D1B64DA600084B1C7 /* AppDelegate.m in Sources */,
 				8046BD6A1B64DA600084B1C7 /* main.m in Sources */,
+				8046BDA21B64E30E0084B1C7 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +296,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8046BD711B64DA600084B1C7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8046BD721B64DA600084B1C7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8046BD761B64DA600084B1C7 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -416,6 +460,7 @@
 				8046BD891B64DA600084B1C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8046BD8A1B64DA600084B1C7 /* Build configuration list for PBXNativeTarget "Pactera TestTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +469,7 @@
 				8046BD8C1B64DA600084B1C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

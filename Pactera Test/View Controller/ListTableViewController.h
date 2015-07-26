@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ListTableViewController.h
 //  Pactera Test
 //
 //  Created by Prabhjot Singh on 26/07/2015.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ListTableViewController : UITableViewController
 
 
 @end
